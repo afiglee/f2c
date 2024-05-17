@@ -1,14 +1,11 @@
 dnl -*- Autoconf -*-
-AC_INIT([F2C Fortran to C99 compiler],
-	[12.02.01],
-	[jjgarcia@users.sourceforge.net],
-	[f2c])
+AC_INIT([F2C Fortran to C99 compiler],[12.02.01],[jjgarcia@users.sourceforge.net],[f2c])
 
 #
 # Initialize Autoconf. Note that all files in config_aux are created by
 # the automatic tools.
 #
-AC_PREREQ(2.59)
+AC_PREREQ([2.71])
 AC_CONFIG_SRCDIR([./README.md])		dnl Unique file where sources are
 AC_CONFIG_MACRO_DIR([m4])		dnl Additional macro directories
 AC_CONFIG_AUX_DIR([config_aux])		dnl Where to put autoconf files
@@ -28,7 +25,7 @@ AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 dist-zip subdir-objects])
 AC_PROG_CC
 AM_PROG_CC_C_O # needed to build in subdirs
 AC_LANG([C])
-AC_PROG_LIBTOOL
+LT_INIT
 
 # Check the size of the integer types
 FC_INT_TEST
